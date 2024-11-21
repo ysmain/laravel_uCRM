@@ -13,7 +13,8 @@ class StoreItemRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        // ここは必ずtrueにする。falseだとエラーが出る。
+        return true;
     }
 
     /**
@@ -23,8 +24,12 @@ class StoreItemRequest extends FormRequest
      */
     public function rules()
     {
+        // バリデーションを設定できる
         return [
             //
+            'name' => ['required','max:50'],
+            'memo' => ['required','max:255'],
+            'price' => ['required','numeric'],
         ];
     }
 }

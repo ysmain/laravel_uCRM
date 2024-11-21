@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         // 実行するシーダーの指定
         $this->call([
             UserSeeder::class,
+            ItemSeeder::class
         ]);
 
         // \App\Models\User::factory(10)->create();

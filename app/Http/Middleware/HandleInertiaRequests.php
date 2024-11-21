@@ -44,7 +44,8 @@ class HandleInertiaRequests extends Middleware
                 // フラッシュデータは次のリクエストでのみ有効
                 // セッションにメッセージがある場合にのみ、セッションのデータを取得して
                 // フラッシュデータとしてui側で表示させる
-                'message' => fn() => $request->session()->get('message')
+                'message' => fn() => $request->session()->get('message'),
+                'status' => fn() => $request->session()->get('status')
             ]
         ]);
     }

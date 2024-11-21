@@ -22,6 +22,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'test',
             'email' => 'test@test.com',
+            // passwordの場合、Hashは必須
             'password' => Hash::make('password123'),
         ]);
     }

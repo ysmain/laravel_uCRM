@@ -1,6 +1,7 @@
 <script setup>
 import { reactive } from 'vue'
 import { Inertia } from '@inertiajs/inertia'
+import ValidationErrors from '@/Components/ValidationErrors.vue'
 
 defineProps({
     // storeメソッドでのバリデーションエラーを受け取る。型指定。
@@ -20,6 +21,8 @@ const submitFunction = () => {
 </script>
 
 <template>
+    <!-- 子コンポーネント内へエラーを送ってる。 -->
+    <ValidationErrors :errors="errors" />
     <!-- prevent デフォルトのformの予期せぬ画面遷移を防ぐ -->
     <form @submit.prevent="submitFunction">
         <input type="text" name="title" v-model="form.title"><br>
