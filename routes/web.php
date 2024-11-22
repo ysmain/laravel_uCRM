@@ -5,14 +5,15 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\InertiaTestController;
 
 Route::resource('items', ItemController::class)
 ->middleware(['auth', 'verified']);
-// resourceだとnameも自動的にできる。items.indexなど
+// resourceだとnameのエンドポイントも自動的にできる。items.indexなど
 
-
-
+Route::resource('customers', CustomerController::class)
+->middleware(['auth','verified']);
 
 
 

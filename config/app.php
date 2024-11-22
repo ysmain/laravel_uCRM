@@ -68,7 +68,7 @@ return [
     | ahead and set this to a sensible default for you out of the box.
     |
     */
-
+    // 東京に変更
     'timezone' => 'Asia/Tokyo',
 
     /*
@@ -81,7 +81,7 @@ return [
     | to any of the locales which will be supported by the application.
     |
     */
-
+    // 日本語に変更
     'locale' => 'ja',
 
     /*
@@ -107,8 +107,8 @@ return [
     | localized telephone numbers, street address information and more.
     |
     */
-
-    'faker_locale' => 'en_US',
+    // 日本語に変更　これはファクトリーのダミーデータ作成で使用
+    'faker_locale' => 'ja_JP',
 
     /*
     |--------------------------------------------------------------------------

@@ -19,7 +19,7 @@ class ItemSeeder extends Seeder
     public function run()
     {
         //
-        //試験用ダミーデータの設定
+        //試験用ダミーデータの設定１(小規模)
         DB::table('items')->insert([
             [
             'name' => 'カット',

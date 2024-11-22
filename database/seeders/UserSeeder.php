@@ -18,12 +18,12 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        //試験用ダミーデータの設定
+        //試験用ダミーデータの設定１(小規模)
         DB::table('users')->insert([
-            'name' => 'test',
-            'email' => 'test@test.com',
+            'name' => 'daizen',
+            'email' => 'daizen@gmail.com',
             // passwordの場合、Hashは必須
-            'password' => Hash::make('password123'),
+            'password' => Hash::make('12345678'),
         ]);
     }
 }
